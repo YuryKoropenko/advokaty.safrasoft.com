@@ -38,7 +38,97 @@ ol, ul {
   display: table;
 }
 
+/*блоки*/
+body {
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.25;
+  font-family: "OpenSansRegular", sans-serif;
+  overflow-x: hidden;
+  background-color: #fafafa;
+}
+
+.header {
+  background-color: #fafafa;
+}
+
+.header-border {
+  border: 1px solid #bfbfbf;
+}
+
+.header__h-logo {
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+.header__h-nav {
+  padding-bottom: 19px;
+  padding-top: 35px;
+}
+
+.header__h-search {
+  clear: both;
+}
+
+.page__section-baner {
+  position: relative;
+}
+
+.page__p-left {
+  margin-right: -15px;
+}
+
+.page__p-right {
+  margin-left: -15px;
+}
+
+.page__p-path {
+  padding-top: 30px;
+  padding-bottom: 25px;
+}
+
+.page__p-documentation {
+  padding-left: 50px;
+  padding-top: 70px;
+  padding-bottom: 60px;
+}
+
+.page__p-navigation {
+  text-align: center;
+}
+
+.page__p-articles {
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.footer {
+  padding-top: 48px;
+  padding-bottom: 42px;
+}
+
+.footer__f-rights {
+  text-align: left;
+}
+
+.footer__f-map {
+  text-align: right;
+}
+
 /*компоненты*/
+.btn {
+  height: 40px;
+  display: block;
+  background-color: #698a39;
+  border: 1px solid #698a39;
+  line-height: 38px;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  width: 100%;
+}
+
 /*шапка - навигация*/
 .h-nav {
   display: -webkit-flex;
@@ -70,7 +160,7 @@ ol, ul {
   padding-right: 18px;
   position: relative;
   text-decoration: underline;
-  font-size: 13px;
+  font-size: 0.8125em;
 }
 
 .h-nav__link::after {
@@ -118,7 +208,7 @@ ol, ul {
   border: 1px solid #5f7e33;
   background-color: #fff;
   color: #010101;
-  font-size: 13px;
+  font-size: 0.8125em;
   padding-left: 20px;
   padding-right: 56px;
 }
@@ -177,7 +267,7 @@ ol, ul {
   color: #010101;
   text-transform: uppercase;
   font-family: "OpenSansBold", sans-serif;
-  font-size: 13px;
+  font-size: 0.8125em;
   padding-top: 10px;
 }
 
@@ -196,7 +286,7 @@ ol, ul {
 }
 
 .p-baner__title {
-  font-size: 38px;
+  font-size: 2.375em;
   color: #000;
   font-family: "GeorgiaRegular", sans-serif;
   display: block;
@@ -209,7 +299,12 @@ ol, ul {
 
 .articlesList__item {
   position: relative;
+  background-color: #fff;
   height: 280px;
+}
+
+.articlesList__item:last-child .articlesList__right {
+  border-color: transparent;
 }
 
 .articlesList__left {
@@ -238,16 +333,18 @@ ol, ul {
   position: absolute;
   left: 280px;
   padding-left: 40px;
+  padding-right: 40px;
   padding-top: 25px;
   right: 0;
   top: 0;
   bottom: 0;
   border-bottom: 1px solid #bfbfbf;
+  overflow: hidden;
 }
 
 .articlesList__data {
   display: block;
-  font-size: 12px;
+  font-size: 0.75em;
   text-transform: uppercase;
   color: #6f6f6f;
   line-height: 25px;
@@ -256,7 +353,7 @@ ol, ul {
 
 .articlesList__title {
   display: inline-block;
-  font-size: 22px;
+  font-size: 1.375em;
   line-height: 30px;
   color: #000;
   font-family: "GeorgiaRegular", sans-serif;
@@ -270,44 +367,262 @@ ol, ul {
 .articlesList__description {
   display: block;
   color: #6f6f6f;
-  font-size: 15px;
+  font-size: 0.9375em;
   line-height: 25px;
   padding-top: 10px;
 }
 
-/*блоки*/
-body {
-  font-size: 16px;
-  min-width: 320px;
-  position: relative;
-  line-height: 1.25;
-  font-family: "OpenSansRegular", sans-serif;
-  overflow-x: hidden;
-  background-color: #fafafa;
+.p-navbar__item {
+  background: -moz-linear-gradient(90deg, #5f7e33 0%, #6b8d3a 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6b8d3a), color-stop(100%, #5f7e33));
+  background: -webkit-linear-gradient(90deg, #5f7e33 0%, #6b8d3a 100%);
+  background: -o-linear-gradient(90deg, #5f7e33 0%, #6b8d3a 100%);
+  background: -ms-linear-gradient(90deg, #5f7e33 0%, #6b8d3a 100%);
+  background: linear-gradient(0deg, #5f7e33 0%, #6b8d3a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b8d3a', endColorstr='#5f7e33',GradientType=0 );
+  border-bottom: 1px solid #759548;
+  padding-bottom: 1px;
+  padding: 30px 40px;
+  box-sizing: border-box;
 }
 
-.header {
-  background-color: #fafafa;
-}
-
-.header__h-logo {
-  padding-top: 15px;
-  padding-left: 15px;
-}
-
-.header__h-nav {
-  padding-bottom: 19px;
-  padding-top: 35px;
-}
-
-.page__section-baner {
+.p-navbar__item-small {
+  height: 140px;
   position: relative;
 }
 
-.page__p-left {
-  margin-right: -15px;
+.p-navbar__item-small .p-navbar__title {
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  display: inline-block;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
-.page__p-right {
-  margin-left: -15px;
+.p-navbar__item-normal {
+  height: 280px;
+}
+
+.p-navbar__title {
+  font-size: 22px;
+  line-height: 30px;
+  padding-left: 30px;
+  background-image: url(../img/icons/star.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  color: #fff;
+  display: inline-block;
+  font-family: "GeorgiaRegular", sans-serif;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.p-navbar__title:hover, .p-navbar__title:focus, .p-navbar__title:active {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.p-navbar__subnav {
+  padding-top: 14px;
+}
+
+.p-navbar__subitem {
+  display: block;
+}
+
+.p-navbar__sublink {
+  display: inline-block;
+  font-size: 0.8125em;
+  padding: 6px 0;
+  color: #fff;
+  font-family: "OpenSansSemibold", sans-serif;
+}
+
+.p-navbar__sublink:hover, .p-navbar__sublink:focus, .p-navbar__sublink:active {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.p-opros {
+  padding: 30px 40px;
+  background-color: #eee;
+  height: 420px;
+}
+
+.p-opros__title {
+  font-size: 22px;
+  line-height: 30px;
+  color: #000;
+  display: inline-block;
+  font-family: "GeorgiaRegular", sans-serif;
+}
+
+.p-opros__list {
+  padding: 15px 0;
+}
+
+.p-opros__item {
+  display: block;
+  padding: 10px 0;
+}
+
+.p-opros__input {
+  display: none;
+}
+
+.p-opros__input:checked + label:after {
+  content: '';
+  display: block !important;
+}
+
+.p-opros__label {
+  padding-left: 32px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.p-opros__label::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #66833c;
+  background-color: #fff;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -10px;
+}
+
+.p-opros__label::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #66833c;
+  display: block;
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  margin-top: -5px;
+  display: none;
+}
+
+.f-rights, .f-map {
+  display: inline-block;
+  color: #6f6f6f;
+  font-size: 13px;
+  line-height: 25px;
+}
+
+.f-map:hover, .f-map:focus, .f-map:active {
+  color: #6f6f6f;
+  text-decoration: underline;
+}
+
+.p-path {
+  font-size: 0;
+}
+
+.p-path__item {
+  display: inline-block;
+  padding-right: 12px;
+  position: relative;
+  line-height: 24px;
+}
+
+.p-path__item:last-child::after {
+  display: none;
+}
+
+.p-path__item::after {
+  content: '-';
+  display: block;
+  position: absolute;
+  font-size: 13px;
+  color: #6f6f6f;
+  position: absolute;
+  width: 12px;
+  right: 0;
+  text-align: center;
+  line-height: 24px;
+  top: 0;
+}
+
+.p-path__link {
+  font-size: 13px;
+  color: #6f6f6f;
+}
+
+.p-title {
+  color: #000;
+  font-family: "GeorgiaRegular", sans-serif;
+  font-size: 38px;
+  display: block;
+}
+
+.p-documentation__item {
+  display: block;
+  padding-bottom: 30px;
+}
+
+.p-documentation__link {
+  line-height: 30px;
+  color: #5f7e33;
+  text-decoration: underline;
+  display: inline-block;
+  font-size: 22px;
+  font-family: "GeorgiaRegular", sans-serif;
+  margin-right: 12px;
+}
+
+.p-documentation__link:hover, .p-documentation__link:focus, .p-documentation__link:active {
+  text-decoration: none;
+  color: #5f7e33;
+}
+
+.p-documentation__file {
+  line-height: 30px;
+  font-size: 12px;
+  color: #6f6f6f;
+  display: inline-block;
+}
+
+.p-navigation {
+  font-size: 0;
+}
+
+.p-navigation__item {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.p-navigation__item-active .p-navigation__link {
+  background-color: #bfbfbf;
+  color: #fff;
+}
+
+.p-navigation__link {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #bfbfbf;
+  background-color: transparent;
+  text-align: center;
+  line-height: 48px;
+  color: #000;
+  font-size: 15px;
+}
+
+.p-navigation__link:hover {
+  background-color: #bfbfbf;
+  color: #fff;
 }

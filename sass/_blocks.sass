@@ -1,0 +1,58 @@
+@import "bourbon/bourbon"
+@import "sass/_custom"
+
+/*блоки*/
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.25
+	font-family: "OpenSansRegular", sans-serif
+	overflow-x: hidden
+	background-color: #fafafa
+
+.header
+	background-color: #fafafa
+	&-border
+		border: 1px solid #bfbfbf
+	&__h-logo
+		padding-top: 15px
+		padding-left: 15px
+	&__h-nav
+		padding-bottom: 19px
+		padding-top: 35px
+	&__h-profil
+		@extend .clearfix
+	&__h-search
+		clear: both
+
+.page
+	&__section
+		&-baner
+			position: relative
+	&__p-left
+		margin-right: -15px
+	&__p-right
+		margin-left: -15px
+	&__p-path
+		padding-top: 30px
+		padding-bottom: 25px
+	&__p-documentation
+		padding-left: 50px
+		padding-top: 70px
+		padding-bottom: 60px
+	&__p-navigation
+		text-align: center
+	&__p-articles
+		padding-top: 30px
+		padding-bottom: 60px
+
+.footer
+	padding-top: 48px
+	padding-bottom: 42px
+	&__f-rights
+		text-align: left
+	&__f-map
+		text-align: right
+

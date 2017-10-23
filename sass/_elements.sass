@@ -1,9 +1,20 @@
 @import "bourbon/bourbon"
-@import "sass/_custom"
+@import "sass/_blocks"
 
 /*компоненты*/
 
 $black: #010101
+
+.btn
+	height: 40px
+	display: block
+	background-color: #698a39
+	border: 1px solid #698a39
+	line-height: 38px
+	text-align: center
+	color: #fff
+	font-size: 15px
+	width: 100%
 
 /*шапка - навигация*/
 .h-nav
@@ -29,7 +40,7 @@ $black: #010101
 		padding-right: 18px
 		position: relative
 		text-decoration: underline
-		font-size: 13px
+		font-size: em(13px)
 		&::after
 			content: ''
 			width: 8px
@@ -68,7 +79,7 @@ $black: #010101
 		border: 1px solid #5f7e33
 		background-color: #fff
 		color: $black
-		font-size: 13px
+		font-size: em(13px)
 		padding-left: 20px
 		padding-right: 56px
 		&::-webkit-input-placeholder
@@ -112,7 +123,7 @@ $black: #010101
 		color: $black
 		text-transform: uppercase
 		font-family: "OpenSansBold", sans-serif
-		font-size: 13px
+		font-size: em(13px)
 		padding-top: 10px
 
 .p-baner
@@ -127,7 +138,7 @@ $black: #010101
 		left: 0
 		right: 0
 	&__title
-		font-size: 38px
+		font-size: em(38px)
 		color: #000
 		font-family: "GeorgiaRegular", sans-serif
 		display: block
@@ -138,7 +149,11 @@ $black: #010101
 .articlesList
 	&__item
 		position: relative
+		background-color: #fff
 		height: 280px
+		&:last-child
+			.articlesList__right
+				border-color: transparent
 	&__left
 		position: absolute
 		left: 0
@@ -161,21 +176,23 @@ $black: #010101
 		position: absolute
 		left: 280px
 		padding-left: 40px
+		padding-right: 40px
 		padding-top: 25px
 		right: 0
 		top: 0
 		bottom: 0
 		border-bottom: 1px solid #bfbfbf
+		overflow: hidden
 	&__data
 		display: block
-		font-size: 12px
+		font-size: em(12px)
 		text-transform: uppercase
 		color: #6f6f6f
 		line-height: 25px
 		padding-bottom: 10px
 	&__title
 		display: inline-block
-		font-size: 22px
+		font-size: em(22px)
 		line-height: 30px
 		color: #000
 		font-family: "GeorgiaRegular", sans-serif
@@ -185,6 +202,197 @@ $black: #010101
 	&__description
 		display: block
 		color: #6f6f6f
-		font-size: 15px
+		font-size: em(15px)
 		line-height: 25px
 		padding-top: 10px
+
+.p-navbar
+	&__item
+		background: -moz-linear-gradient(90deg, rgba(95,126,51,1) 0%, rgba(107,141,58,1) 100%) /* ff3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(107,141,58,1)), color-stop(100%, rgba(95,126,51,1))) /* safari4+,chrome */
+		background: -webkit-linear-gradient(90deg, rgba(95,126,51,1) 0%, rgba(107,141,58,1) 100%) /* safari5.1+,chrome10+ */
+		background: -o-linear-gradient(90deg, rgba(95,126,51,1) 0%, rgba(107,141,58,1) 100%) /* opera 11.10+ */
+		background: -ms-linear-gradient(90deg, rgba(95,126,51,1) 0%, rgba(107,141,58,1) 100%) /* ie10+ */
+		background: linear-gradient(0deg, rgba(95,126,51,1) 0%, rgba(107,141,58,1) 100%) /* w3c */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b8d3a', endColorstr='#5f7e33',GradientType=0 ) /* ie6-9 */
+		border-bottom: 1px solid #759548
+		padding-bottom: 1px
+		padding: 30px 40px
+		box-sizing: border-box
+		&-small
+			height: 140px
+			position: relative
+			.p-navbar__title
+				position: absolute
+				left: 40px
+				right: 40px
+				display: inline-block
+				top: 50%
+				@include transform(translateY(-50%))
+		&-normal
+			height: 280px
+	&__title
+		font-size: 22px
+		line-height: 30px
+		padding-left: 30px
+		background-image: url(../img/icons/star.png)
+		background-repeat: no-repeat
+		background-position: left center
+		color: #fff
+		display: inline-block
+		font-family: "GeorgiaRegular", sans-serif
+		z-index: 1
+		cursor: pointer
+		&:hover, &:focus, &:active
+			color: #fff
+			text-decoration: underline
+	&__subnav
+		padding-top: 14px
+	&__subitem
+		display: block
+	&__sublink
+		display: inline-block
+		font-size: em(13px)
+		padding: 6px 0
+		color: #fff
+		font-family: "OpenSansSemibold", sans-serif
+		&:hover, &:focus, &:active
+			color: #fff
+			text-decoration: underline
+
+.p-opros
+	padding: 30px 40px
+	background-color: #eee
+	height: 420px
+	&__title
+		font-size: 22px
+		line-height: 30px
+		color: #000
+		display: inline-block
+		font-family: "GeorgiaRegular", sans-serif
+	&__list
+		padding: 15px 0
+	&__item
+		display: block
+		padding: 10px 0
+	&__input
+		display: none
+		&:checked + label:after
+			content: ''
+			display: block !important
+	&__label
+		padding-left: 32px
+		display: inline-block
+		position: relative
+		cursor: pointer
+		font-size: 15px
+		&::before
+			content: ''
+			width: 20px
+			height: 20px
+			border-radius: 50%
+			border: 1px solid #66833c
+			background-color: #fff
+			display: block
+			position: absolute
+			left: 0
+			top: 50%
+			margin-top: -10px
+		&::after
+			content: ''
+			width: 10px
+			height: 10px
+			border-radius: 50%
+			background-color: #66833c
+			display: block
+			position: absolute
+			left: 5px
+			top: 50%
+			margin-top: -5px
+			display: none
+
+.f-rights, .f-map
+	display: inline-block
+	color: #6f6f6f
+	font-size: 13px
+	line-height: 25px
+.f-map
+	&:hover, &:focus, &:active
+		color: #6f6f6f
+		text-decoration: underline
+
+.p-path
+	font-size: 0
+	&__item
+		display: inline-block
+		padding-right: 12px
+		position: relative
+		line-height: 24px
+		&:last-child
+			&::after
+				display: none
+		&::after
+			content: '-'
+			display: block
+			position: absolute
+			font-size: 13px
+			color: #6f6f6f
+			position: absolute
+			width: 12px
+			right: 0
+			text-align: center
+			line-height: 24px
+			top: 0
+	&__link
+		font-size: 13px
+		color: #6f6f6f
+
+.p-title
+	color: #000
+	font-family: "GeorgiaRegular", sans-serif
+	font-size: 38px
+	display: block
+
+.p-documentation
+	&__item
+		display: block
+		padding-bottom: 30px
+	&__link
+		line-height: 30px
+		color: #5f7e33
+		text-decoration: underline
+		display: inline-block
+		font-size: 22px
+		font-family: "GeorgiaRegular", sans-serif
+		margin-right: 12px
+		&:hover, &:focus, &:active
+			text-decoration: none
+			color: #5f7e33
+	&__file
+		line-height: 30px
+		font-size: 12px
+		color: #6f6f6f
+		display: inline-block
+
+.p-navigation
+	font-size: 0
+	&__item
+		display: inline-block
+		padding: 0 5px
+		&-active
+			.p-navigation__link
+				background-color: #bfbfbf
+				color: #fff
+	&__link
+		display: block
+		width: 50px
+		height: 50px
+		border: 1px solid #bfbfbf
+		background-color: transparent
+		text-align: center
+		line-height: 48px
+		color: #000
+		font-size: 15px
+		&:hover
+			background-color: #bfbfbf
+			color: #fff
