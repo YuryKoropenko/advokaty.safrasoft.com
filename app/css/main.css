@@ -27,13 +27,13 @@ ol, ul {
   list-style: none;
 }
 
-.clearfix:after, .header__h-profil:after {
+.clearfix:after, .header__h-profil:after, .p-photo:after {
   content: '';
   display: table;
   clear: both;
 }
 
-.clearfix:before, .header__h-profil:before {
+.clearfix:before, .header__h-profil:before, .p-photo:before {
   content: '';
   display: table;
 }
@@ -75,6 +75,11 @@ body {
   position: relative;
 }
 
+.page__section-photo {
+  padding-bottom: 50px;
+  padding-top: 30px;
+}
+
 .page__p-left {
   margin-right: -15px;
 }
@@ -101,6 +106,30 @@ body {
 .page__p-articles {
   padding-top: 30px;
   padding-bottom: 60px;
+}
+
+.page__p-article {
+  background-color: #fff;
+  padding-top: 30px;
+  margin-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 40px;
+}
+
+.page__p-autor {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.page__p-autor::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.page__p-theme {
+  padding-top: 30px;
 }
 
 .footer {
@@ -142,6 +171,7 @@ body {
 
 .h-nav__item {
   display: block;
+  position: relative;
 }
 
 .h-nav__item-no .h-nav__link {
@@ -231,6 +261,37 @@ body {
 .h-search__input:-ms-input-placeholder {
   color: #808080;
   opacity: 1;
+}
+
+.h-subnav {
+  width: 200px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -100px;
+  background-color: #fafafa;
+  padding: 20px;
+  z-index: 10;
+  border: 1px solid #bfbfbf;
+  display: none;
+}
+
+.h-subnav__item {
+  display: block;
+  text-align: center;
+  padding: 3px 0;
+}
+
+.h-subnav__link {
+  font-size: 15px;
+  text-transform: none;
+  color: #010101;
+  text-decoration: underline;
+}
+
+.h-subnav__link:hover, .h-subnav__link:focus, .h-subnav__link:active {
+  text-decoration: none;
+  color: #010101;
 }
 
 .h-profil {
@@ -625,4 +686,158 @@ body {
 .p-navigation__link:hover {
   background-color: #bfbfbf;
   color: #fff;
+}
+
+.p-article__data {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  color: #6f6f6f;
+  line-height: 30px;
+  display: block;
+  padding-bottom: 25px;
+}
+
+.p-article p {
+  color: #6f6f6f;
+  font-size: 0.9375em;
+  line-height: 25px;
+  display: block;
+}
+
+.p-article__wp {
+  margin-left: -50px;
+  margin-right: -50px;
+  width: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.p-article__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.p-article h2, .p-article h3, .p-article h4 {
+  display: block;
+  color: #000;
+  font-size: 22px;
+  line-height: 30px;
+  font-family: "GeorgiaRegular", sans-serif;
+  font-weight: normal;
+  padding-top: 35px;
+}
+
+.p-article ul {
+  padding: 17px 0;
+}
+
+.p-article ul li {
+  display: block;
+  position: relative;
+  padding: 8px 0 8px 20px;
+  color: #6f6f6f;
+  font-size: 0.9375em;
+}
+
+.p-article ul li::before {
+  content: '';
+  width: 3px;
+  height: 3px;
+  background-color: #5f7e33;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -1.5px;
+}
+
+.p-article ol {
+  list-style: decimal;
+  padding: 17px 0;
+}
+
+.p-article ol li {
+  margin-left: 20px;
+  padding: 8px 0 8px 20px;
+  color: #6f6f6f;
+  font-size: 0.9375em;
+}
+
+.p-autor {
+  color: #c9c9c9;
+  font-size: 0.9375em;
+  line-height: 50px;
+}
+
+.p-autor a {
+  color: #5f7e33;
+  text-decoration: underline;
+  display: inline-block;
+}
+
+.p-autor a:hover, .p-autor a:focus, .p-autor a:active {
+  text-decoration: none;
+  color: #5f7e33;
+}
+
+.p-soc {
+  font-size: 0;
+  float: right;
+  margin-left: 30px;
+}
+
+.p-soc__text {
+  color: #c9c9c9;
+  font-size: 0.9375em;
+  line-height: 50px;
+  display: inline-block;
+  float: right;
+}
+
+.p-soc__item {
+  font-size: 0;
+  display: inline-block;
+}
+
+.p-soc__item:last-child .p-soc__link {
+  border-right: 1px solid #bfbfbf;
+}
+
+.p-soc__link {
+  width: 50px;
+  height: 50px;
+  display: block;
+  border-left: 1px solid #bfbfbf;
+  border-top: 1px solid #bfbfbf;
+  border-bottom: 1px solid #bfbfbf;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.p-photo {
+  margin-left: -1px;
+  margin-right: -1px;
+}
+
+.p-photo__item {
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  width: 25%;
+  height: 285px;
+  float: left;
+}
+
+.p-photo__link {
+  display: block;
+  overflow: hidden;
+  height: 100%;
+}
+
+.p-photo__img {
+  display: block;
+  min-height: 100%;
+  min-width: 100%;
+  width: auto;
 }
