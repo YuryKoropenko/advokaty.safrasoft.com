@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+	$('.p-photo__item').hover(function() {
+		$(this).children().children('.p-photo__patern').stop(false, true).fadeIn();
+	}, function() {
+		$(this).children().children('.p-photo__patern').stop(false, true).fadeOut();
+	});
+
 	if ($(window).width() > 768) {
 		/*header-subnav*/
 		$('.h-nav__item').hover(function() {
