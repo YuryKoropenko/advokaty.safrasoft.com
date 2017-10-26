@@ -25,9 +25,29 @@ $black: #010101
 	display: flex
 	justify-content: space-between
 	-webkit-justify-content: space-between
+	margin-left: -14px
+	margin-right: -14px
+	width: auto
 	&__item
 		display: block
 		position: relative
+		padding: 16px 14px
+		&-active
+			background: -moz-linear-gradient(270deg, rgba(107,141,58,1) 0%, rgba(106,139,57,1) 100%)
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(107,141,58,1)), color-stop(100%, rgba(106,139,57,1)))
+			background: -webkit-linear-gradient(270deg, rgba(107,141,58,1) 0%, rgba(106,139,57,1) 100%)
+			background: -o-linear-gradient(270deg, rgba(107,141,58,1) 0%, rgba(106,139,57,1) 100%)
+			background: -ms-linear-gradient(270deg, rgba(107,141,58,1) 0%, rgba(106,139,57,1) 100%)
+			background: linear-gradient(180deg, rgba(107,141,58,1) 0%, rgba(106,139,57,1) 100%)
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b8d3a', endColorstr='#6a8b39',GradientType=0 )
+			.h-nav__link
+				color: #fff
+				text-decoration: none
+				&:hover, &:focus, &:active
+					text-decoration: none
+					color: #fff
+				&::after
+					background-image: url(../img/icons/green-arrow-bootom-active.png)
 		&-no
 			.h-nav__link
 				padding-right: 0
@@ -54,9 +74,6 @@ $black: #010101
 			right: (18 - 8) / 2 + px
 			top: 50%
 			margin-top: -2.5px
-		&:hover, &:focus, &:active
-			text-decoration: none
-			color: $black
 
 /*шапка - поиск*/
 .h-search
@@ -97,28 +114,33 @@ $black: #010101
 			opacity: 1
 
 .h-subnav
-	width: 200px
+	width: 220px
 	position: absolute
 	top: 100%
-	left: 50%
-	margin-left: -100px
-	background-color: #fafafa
-	padding: 20px
+	left: 0
+	background: -moz-linear-gradient(270deg, rgba(106,139,57,1) 0%, rgba(95,126,51,1) 100%)
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(106,139,57,1)), color-stop(100%, rgba(95,126,51,1)))
+	background: -webkit-linear-gradient(270deg, rgba(106,139,57,1) 0%, rgba(95,126,51,1) 100%)
+	background: -o-linear-gradient(270deg, rgba(106,139,57,1) 0%, rgba(95,126,51,1) 100%)
+	background: -ms-linear-gradient(270deg, rgba(106,139,57,1) 0%, rgba(95,126,51,1) 100%)
+	background: linear-gradient(180deg, rgba(106,139,57,1) 0%, rgba(95,126,51,1) 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6a8b39', endColorstr='#5f7e33',GradientType=0 )
+	padding: 10px 14px
 	z-index: 10
-	border: 1px solid #bfbfbf
 	display: none
 	&__item
 		display: block
-		text-align: center
-		padding: 3px 0
+		text-align: left
+		padding: 4px 0
 	&__link
-		font-size: 15px
+		font-size: 13px
 		text-transform: none
-		color: $black
-		text-decoration: underline
+		color: #ffffff
+		text-decoration: none
+		font-family: "OpenSansSemibold", sans-serif
 		&:hover, &:focus, &:active
-			text-decoration: none
-			color: $black
+			text-decoration: underline
+			color: #fff
 
 .h-profil
 	width: 135px

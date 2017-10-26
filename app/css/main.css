@@ -63,8 +63,8 @@ body {
 }
 
 .header__h-nav {
-  padding-bottom: 19px;
-  padding-top: 35px;
+  padding-bottom: 3px;
+  padding-top: 19px;
 }
 
 .header__h-search {
@@ -167,11 +167,39 @@ body {
   display: flex;
   justify-content: space-between;
   -webkit-justify-content: space-between;
+  margin-left: -14px;
+  margin-right: -14px;
+  width: auto;
 }
 
 .h-nav__item {
   display: block;
   position: relative;
+  padding: 16px 14px;
+}
+
+.h-nav__item-active {
+  background: -moz-linear-gradient(270deg, #6b8d3a 0%, #6a8b39 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6b8d3a), color-stop(100%, #6a8b39));
+  background: -webkit-linear-gradient(270deg, #6b8d3a 0%, #6a8b39 100%);
+  background: -o-linear-gradient(270deg, #6b8d3a 0%, #6a8b39 100%);
+  background: -ms-linear-gradient(270deg, #6b8d3a 0%, #6a8b39 100%);
+  background: linear-gradient(180deg, #6b8d3a 0%, #6a8b39 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b8d3a', endColorstr='#6a8b39',GradientType=0 );
+}
+
+.h-nav__item-active .h-nav__link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.h-nav__item-active .h-nav__link:hover, .h-nav__item-active .h-nav__link:focus, .h-nav__item-active .h-nav__link:active {
+  text-decoration: none;
+  color: #fff;
+}
+
+.h-nav__item-active .h-nav__link::after {
+  background-image: url(../img/icons/green-arrow-bootom-active.png);
 }
 
 .h-nav__item-no .h-nav__link {
@@ -205,11 +233,6 @@ body {
   right: 5px;
   top: 50%;
   margin-top: -2.5px;
-}
-
-.h-nav__link:hover, .h-nav__link:focus, .h-nav__link:active {
-  text-decoration: none;
-  color: #010101;
 }
 
 /*шапка - поиск*/
@@ -264,34 +287,39 @@ body {
 }
 
 .h-subnav {
-  width: 200px;
+  width: 220px;
   position: absolute;
   top: 100%;
-  left: 50%;
-  margin-left: -100px;
-  background-color: #fafafa;
-  padding: 20px;
+  left: 0;
+  background: -moz-linear-gradient(270deg, #6a8b39 0%, #5f7e33 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6a8b39), color-stop(100%, #5f7e33));
+  background: -webkit-linear-gradient(270deg, #6a8b39 0%, #5f7e33 100%);
+  background: -o-linear-gradient(270deg, #6a8b39 0%, #5f7e33 100%);
+  background: -ms-linear-gradient(270deg, #6a8b39 0%, #5f7e33 100%);
+  background: linear-gradient(180deg, #6a8b39 0%, #5f7e33 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6a8b39', endColorstr='#5f7e33',GradientType=0 );
+  padding: 10px 14px;
   z-index: 10;
-  border: 1px solid #bfbfbf;
   display: none;
 }
 
 .h-subnav__item {
   display: block;
-  text-align: center;
-  padding: 3px 0;
+  text-align: left;
+  padding: 4px 0;
 }
 
 .h-subnav__link {
-  font-size: 15px;
+  font-size: 13px;
   text-transform: none;
-  color: #010101;
-  text-decoration: underline;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "OpenSansSemibold", sans-serif;
 }
 
 .h-subnav__link:hover, .h-subnav__link:focus, .h-subnav__link:active {
-  text-decoration: none;
-  color: #010101;
+  text-decoration: underline;
+  color: #fff;
 }
 
 .h-profil {
