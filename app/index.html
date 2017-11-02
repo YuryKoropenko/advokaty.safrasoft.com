@@ -14,7 +14,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Styles -->
 	<link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="libs/fancybox/dist/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/media.css">
@@ -33,7 +33,7 @@
 				</div>
 				<div class="col-md-2 col-md-push-8 col-sm-6 col-xs-6">
 					<div class="header__h-profil">
-						<a href="#" class="h-profil" style="float: right;">
+						<a href="#vhod" class="h-profil" style="float: right;">
 							<span class="h-profil__wrapper">
 								<i class="h-profil__icon"></i>
 								<span class="h-profil__text">
@@ -421,8 +421,23 @@
 			</div>
 		</div>
 	</footer>
+	<div class="m-vhod" id="vhod">
+		<div class="m-vhod__wrapper">
+			<div class="m-vhod__title">
+				Авторизация
+			</div>
+			<form action="">
+				<div class="m-vhod__list">
+					<input type="text" placeholder="Лоргин" class="m-vhod__input">
+					<input type="password" placeholder="Пароль" class="m-vhod__input">
+				</div>
+				<input type="submit" value="Войти" class="m-vhod__button">
+			</form>
+		</div>
+	</div>
 	<!-- Scripts -->
 	<script type="text/javascript" src="libs/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="libs/fancybox/dist/jquery.fancybox.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<!-- End_Scripts -->
 </body>

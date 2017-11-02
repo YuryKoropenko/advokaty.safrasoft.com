@@ -900,6 +900,77 @@ body {
   min-width: 100%;
 }
 
+.m-vhod {
+  display: none;
+  padding: 0 !important;
+  width: 380px;
+}
+
+.m-vhod__wrapper {
+  padding: 40px;
+}
+
+.m-vhod__title {
+  font-size: 22px;
+  color: #000;
+  font-family: "GeorgiaRegular", sans-serif;
+  line-height: 30px;
+  display: block;
+  padding-bottom: 30px;
+}
+
+.m-vhod__list {
+  padding-bottom: 40px;
+}
+
+.m-vhod__input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 0 18px;
+  height: 40px;
+  border: 1px solid #5f7e33;
+  background-color: transparent;
+  font-size: 13px;
+  color: #000;
+}
+
+.m-vhod__input:last-child {
+  margin-bottom: 0;
+}
+
+.m-vhod__button {
+  height: 40px;
+  text-align: center;
+  padding: 0 38px;
+  font-size: 15px;
+  color: #fff;
+  border: none;
+  background: -moz-linear-gradient(90deg, #5f7e33 0%, #6b8d3a 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6b8d3a), color-stop(100%, #5f7e33));
+  background: -webkit-linear-gradient(90deg, #5f7e33 0%, #6b8d3a 100%);
+  background: -o-linear-gradient(90deg, #5f7e33 0%, #6b8d3a 100%);
+  background: -ms-linear-gradient(90deg, #5f7e33 0%, #6b8d3a 100%);
+  background: linear-gradient(0deg, #5f7e33 0%, #6b8d3a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b8d3a', endColorstr='#5f7e33',GradientType=0 );
+}
+
+.fancybox-close-small {
+  width: 16px;
+  height: 16px;
+  text-indent: -9999px;
+  background-image: url(../img/icons/close.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  top: 20px;
+  right: 20px;
+}
+
+.fancybox-close-small::after {
+  display: none;
+}
+
 .fancybox-image {
   max-width: 100% !important;
 }

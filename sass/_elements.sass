@@ -586,3 +586,58 @@ $black: #010101
 		height: 100%
 		width: auto
 		min-width: 100%
+
+.m-vhod
+	display: none
+	padding: 0 !important
+	width: 380px
+	&__wrapper
+		padding: 40px
+	&__title
+		font-size: 22px
+		color: #000
+		font-family: "GeorgiaRegular", sans-serif
+		line-height: 30px
+		display: block
+		padding-bottom: 30px
+	&__list
+		padding-bottom: 40px
+	&__input
+		display: block
+		width: 100%
+		margin-bottom: 10px
+		padding: 0 18px
+		height: 40px
+		border: 1px solid #5f7e33
+		background-color: transparent
+		font-size: 13px
+		color: #000
+		&:last-child
+			margin-bottom: 0
+	&__button
+		height: 40px
+		text-align: center
+		padding: 0 38px
+		font-size: 15px
+		color: #fff
+		border: none
+		background: -moz-linear-gradient(90deg, rgba(95,126,51,1) 0%, rgba(107,141,58,1) 100%)
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(107,141,58,1)), color-stop(100%, rgba(95,126,51,1)))
+		background: -webkit-linear-gradient(90deg, rgba(95,126,51,1) 0%, rgba(107,141,58,1) 100%)
+		background: -o-linear-gradient(90deg, rgba(95,126,51,1) 0%, rgba(107,141,58,1) 100%)
+		background: -ms-linear-gradient(90deg, rgba(95,126,51,1) 0%, rgba(107,141,58,1) 100%)
+		background: linear-gradient(0deg, rgba(95,126,51,1) 0%, rgba(107,141,58,1) 100%)
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b8d3a', endColorstr='#5f7e33',GradientType=0 )
+
+.fancybox-close-small
+	width: 16px
+	height: 16px
+	text-indent: -9999px
+	background-image: url(../img/icons/close.png)
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: cover
+	top: 20px
+	right: 20px
+	&::after
+		display: none

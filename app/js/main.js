@@ -31,5 +31,6 @@ $(document).ready(function() {
 		});
 	}
 
+	$('.h-profil').fancybox();
 	$('.p-photo__link').fancybox();
 });
