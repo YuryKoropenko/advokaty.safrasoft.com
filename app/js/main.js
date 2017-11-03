@@ -31,6 +31,6 @@ $(document).ready(function() {
 		});
 	}
 
-	$('.h-profil').fancybox();
+	$('.h-profil-nologin').fancybox();
 	$('.p-photo__link').fancybox();
 });
